@@ -14,145 +14,179 @@ namespace Task_1
     public partial class MemoryGame : Form
     {
         #region variable settings
-        //Settings
-        public string str1, str2, str3, str4, str5, str6, str7, str8, str9, str10, str11, str12, str13, str14, str15, str16, str17, str18, str19, str20;
-
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private string str18a, str18b, str18c, str18d, str18e, str18f, str10a, str20a;
-        private string sFileMark = "", strFileData = "", strMod = "", strCam = "", strCEMdes = "", strCEMdes2 = "", strCEMdat = "", strCEMkm = "", sDatDos = "", sCarCol = "";
+        public string LevelConfirmation = "";
+        public string[] WordSelected;
+        public int[] RandomIndexWordSelected;
+        public int iPosition = 0;
+        string strDat = @"profit
+smell
+deserted
+evasive
+pull
+share
+achiever
+ignore
+pest
+donkey
+unbiased
+confuse
+bike
+receptive
+feeling
+soak
+sturdy
+muddled
+pump
+room
+stale
+event
+hospitable
+claim
+string
+jellyfish
+cover
+equable
+cute
+cheap
+efficacious
+confused
+neck
+quickest
+maid
+zippy
+hilarious
+frail
+supreme
+phobic
+welcome
+buzz
+axiomatic
+telephone
+daughter
+vulgar
+hateful
+income
+surround
+curious
+reading
+fluttering
+chalk
+irritate
+woozy
+battle
+ray
+rat
+tap
+false
+thunder
+melted
+pack
+assorted
+box
+earth
+committee
+remarkable
+memorize
+jam
+beginner
+entertain
+elfin
+end
+teeny
+imminent
+puzzled
+near
+yam
+addition
+picture
+probable
+painstaking
+doctor
+diligent
+cynical
+trade
+half
+burn
+comparison
+grade
+few
+productive
+jelly
+shaky
+sort
+action
+materialistic
+skin
+little";
         #endregion
 
         public MemoryGame()
         {
             InitializeComponent();
 
-            //sFileMark = Path.Combine(@"..\", "Words.txt");
-            //sFileMark = Path.Combine(@"~\App_Data", "Words.txt");
+            //select difficulty level
+            DifficultyLevelSelecting wDiffSel = new DifficultyLevelSelecting();
+            wDiffSel.ShowDialog();
+            LevelConfirmation = wDiffSel.LevelConfirmation;
 
-
-
+            //gathering data from the existing file
             try
             {
-                //sFileMark = Path.Combine(@"Task_1.exe");
-                sFileMark = Path.Combine("Words.txt");
-
+                //String sFileMark = Path.Combine("Words.txt");
                 //if (System.IO.File.Exists(sFileMark))
-                if (System.IO.File.Exists(sFileMark))
+                //{
+                //    using (StreamReader srStrRea = new StreamReader(sFileMark))
+                //    {
+                //        String strFileData = srStrRea.ReadToEnd();
+                //        if (strFileData != "")
+                //        {
+                //            //selecting gathered data
+                //            tBFileData.Text = strFileData;
+                tBFileData.Text = strDat;       //only for tests
+                String strFileData = strDat.Replace("\r","");    //only for tests
+                WordSelected = strFileData.Split('\n');
+                if (WordSelected.Length > 0) 
                 {
-                    lConf_OK.Text = "OK " + sFileMark;
-                    using (StreamReader sr = new StreamReader(sFileMark))
+                    //tB2.Text = "first" + WordSelected[0] + "' all together" + WordSelected.Length.ToString();
+                    
+                    //random words selection
+                    switch (LevelConfirmation)
                     {
-                        strFileData = sr.ReadToEnd();
-                        if (strFileData != "")
-                        {
-                            //sql = "update kkf_dealer_data_agenda set workers = '" + strFileData + "' where ID_dealer = '" + strFullUData + "'";
-                            tBFileData.Text = strFileData + "' where ID_dealer = '" + sFileMark + "'";
-                            //SqlCommand cmd = new SqlCommand(sql, conn);
-                            //string r = Convert.ToString(cmd.ExecuteNonQuery());
-                        }
+                        case "EASY":
+                            GetRandomIndex(4); break;
+                        case "HARD":
+                            GetRandomIndex(8); break;
+                        default:
+                            break;
                     }
+                    int iPossss = RandomIndexWordSelected[0];
+
                 }
+
+                else
+                    {
+                        //choose another random data
+                    }
+                //        }
+                //        else
+                //        {
+                //            //choose another random data
+                //        }
+                //    }
+                //}
             }
             catch (Exception e)
             {
                 MessageBox.Show("Exception: " + e.Message);
             }
-            finally
-            {
-                MessageBox.Show("No valid data");
-            }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void GetRandomIndex (int WordQuantity)
         {
-            //data read from the Words.txt file
-            //try
-            //{
-            //    sFileMark = Path.Combine(@"..\", "Words.txt");
-            //sFileMark = Path.Combine(@"~~\App_Data", "Words.txt");
-
-            //sFileMark = Path.Combine(@"Task_1.exe");
-            sFileMark = Path.Combine("Words.txt");
-
-            //if (System.IO.File.Exists(sFileMark))
-             if (System.IO.File.Exists(sFileMark))
-                {
-                    lConf_OK.Text = "OK" + sFileMark;
-                    using (StreamReader sr = new StreamReader(sFileMark))
-                    {
-                        strFileData = sr.ReadToEnd();
-                        if (strFileData != "")
-                        {
-                        //sql = "update kkf_dealer_data_agenda set workers = '" + strFileData + "' where ID_dealer = '" + strFullUData + "'";
-                            tBFileData.Text = "update dortech_admin.kkf_dealer_data_agenda set workers = '" + strFileData + "' where ID_dealer = '" + sFileMark + "'";
-                            //SqlCommand cmd = new SqlCommand(sql, conn);
-                            //string r = Convert.ToString(cmd.ExecuteNonQuery());
-                        }
-                    }
-                }
-
-                ////Pass the file path and file name to the StreamReader constructor
-                //StreamReader sr = new StreamReader("C:\\Sample.txt");
-                ////Read the first line of text
-                //line = sr.ReadLine();
-                ////Continue to read until you reach end of file
-                //while (line != null)
-                //{
-                //    //write the line to console window
-                //    Console.WriteLine(line);
-                //    //Read the next line
-                //    line = sr.ReadLine();
-                //}
-                ////close the file
-                //sr.Close();
-                //Console.ReadLine();
-            //}
-            //catch (Exception)
-            //{
-            //    Console.WriteLine("Exception: ");
-            //}
-            //finally
-            //{
-            //    Console.WriteLine("Executing finally block.");
-            //}
-
-
-            /*
-            StreamReader reader = new StreamReader(winDir + "\\system.ini");
-            try
-            {
-                do
-                {
-                    addListItem(reader.ReadLine());
-                }
-                while (reader.Peek() != -1);
-            }
-            catch
-            {
-                addListItem("File is empty");
-            }
-            finally
-            {
-                reader.Close();
-            }
-            */
-
-            //using (StreamReader sr = new StreamReader(strAgendaData))
-            //{
-            //    strFileData = sr.ReadToEnd();
-            //    if (strFileData != "")
-            //    {
-            //        //sql = "update kkf_dealer_data_agenda set workers = '" + strFileData + "' where ID_dealer = '" + strFullUData + "'";
-            //        string sql = "update dortech_admin.kkf_dealer_data_agenda set workers = '" + strFileData + "' where ID_dealer = '" + strIDname + "'";
-            //        SqlCommand cmd = new SqlCommand(sql, conn);
-            //        string r = Convert.ToString(cmd.ExecuteNonQuery());
-            //    }
-            //}
-
+            RandomIndexWordSelected = new int[WordQuantity];
+            Random RandomWordIndex = new Random();
+            for (int position = 0; position < WordQuantity; position++)
+                RandomIndexWordSelected[position] = RandomWordIndex.Next(100);
         }
     }
 }

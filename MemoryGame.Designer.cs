@@ -29,27 +29,15 @@ namespace Task_1
         /// </summary>
         private void InitializeComponent()
         {
-            this.lConfirmation = new System.Windows.Forms.Label();
             this.l1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tBFileData = new System.Windows.Forms.TextBox();
             this.lRecordsQuantity = new System.Windows.Forms.Label();
-            this.lConf_OK = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.SelectEasyLevel = new System.Windows.Forms.RadioButton();
-            this.SelecHardLevel = new System.Windows.Forms.RadioButton();
+            this.lConfirmation = new System.Windows.Forms.Label();
+            this.lConf_OK = new System.Windows.Forms.Label();
+            this.tB2 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
-            // 
-            // lConfirmation
-            // 
-            this.lConfirmation.AutoSize = true;
-            this.lConfirmation.Location = new System.Drawing.Point(28, 180);
-            this.lConfirmation.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lConfirmation.Name = "lConfirmation";
-            this.lConfirmation.Size = new System.Drawing.Size(94, 20);
-            this.lConfirmation.TabIndex = 0;
-            this.lConfirmation.Text = "file readings";
             // 
             // l1
             // 
@@ -91,6 +79,26 @@ namespace Task_1
             this.lRecordsQuantity.TabIndex = 4;
             this.lRecordsQuantity.Text = "records ";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(33, 412);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(112, 35);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // lConfirmation
+            // 
+            this.lConfirmation.AutoSize = true;
+            this.lConfirmation.Location = new System.Drawing.Point(28, 180);
+            this.lConfirmation.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lConfirmation.Name = "lConfirmation";
+            this.lConfirmation.Size = new System.Drawing.Size(94, 20);
+            this.lConfirmation.TabIndex = 0;
+            this.lConfirmation.Text = "file readings";
+            // 
             // lConf_OK
             // 
             this.lConf_OK.AutoSize = true;
@@ -101,60 +109,22 @@ namespace Task_1
             this.lConf_OK.TabIndex = 5;
             this.lConf_OK.Text = "odczyt pliku";
             // 
-            // button1
+            // tB2
             // 
-            this.button1.Location = new System.Drawing.Point(33, 412);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 35);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(33, 98);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(352, 20);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Before starting, please choose the difficulty level:";
-            // 
-            // SelectEasyLevel
-            // 
-            this.SelectEasyLevel.AutoSize = true;
-            this.SelectEasyLevel.Location = new System.Drawing.Point(402, 70);
-            this.SelectEasyLevel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.SelectEasyLevel.Name = "SelectEasyLevel";
-            this.SelectEasyLevel.Size = new System.Drawing.Size(322, 24);
-            this.SelectEasyLevel.TabIndex = 8;
-            this.SelectEasyLevel.TabStop = true;
-            this.SelectEasyLevel.Text = "Easy level, you have to guess 4 word pairs";
-            this.SelectEasyLevel.UseVisualStyleBackColor = true;
-            this.SelectEasyLevel.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
-            // 
-            // SelecHardLevel
-            // 
-            this.SelecHardLevel.AutoSize = true;
-            this.SelecHardLevel.Location = new System.Drawing.Point(402, 129);
-            this.SelecHardLevel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.SelecHardLevel.Name = "SelecHardLevel";
-            this.SelecHardLevel.Size = new System.Drawing.Size(326, 24);
-            this.SelecHardLevel.TabIndex = 9;
-            this.SelecHardLevel.TabStop = true;
-            this.SelecHardLevel.Text = "Hard level , you have to guess 8 word pairs";
-            this.SelecHardLevel.UseVisualStyleBackColor = true;
+            this.tB2.Location = new System.Drawing.Point(490, 555);
+            this.tB2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tB2.Multiline = true;
+            this.tB2.Name = "tB2";
+            this.tB2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tB2.Size = new System.Drawing.Size(409, 370);
+            this.tB2.TabIndex = 7;
             // 
             // MemoryGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2175, 1075);
-            this.Controls.Add(this.SelecHardLevel);
-            this.Controls.Add(this.SelectEasyLevel);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(1222, 958);
+            this.Controls.Add(this.tB2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.lConf_OK);
             this.Controls.Add(this.lRecordsQuantity);
@@ -172,17 +142,14 @@ namespace Task_1
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lConfirmation;
         private System.Windows.Forms.Label l1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tBFileData;
         private System.Windows.Forms.Label lRecordsQuantity;
-        private System.Windows.Forms.Label lConf_OK;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.RadioButton SelectEasyLevel;
-        private System.Windows.Forms.RadioButton SelecHardLevel;
+        private System.Windows.Forms.Label lConfirmation;
+        private System.Windows.Forms.Label lConf_OK;
+        private System.Windows.Forms.TextBox tB2;
     }
 }
 
