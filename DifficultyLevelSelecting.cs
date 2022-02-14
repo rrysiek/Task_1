@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Task_1
 {
-    public partial class Form1 : Form
+    public partial class DifficultyLevelSelecting : Form
     {
-        public Form1()
+        public DifficultyLevelSelecting()
         {
             InitializeComponent();
+        }
+
+        private void DifficultyLevelSelecting_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
