@@ -24,22 +24,18 @@ namespace Task_1
             this.Close();
         }
 
-        private void SelectHardLevel_CheckedChanged_1(object sender, EventArgs e)
+        private void EasySelect_CheckedChanged(object sender, EventArgs e)
         {
             Confirmation_Button.Enabled = true;
-            Confirmation_Button.Text = "HARD level selected";
-            LevelConfirmation = "HARD";
-            SelectEasyLevel.Checked = false;
-            SelectEasyLevel.CheckState = CheckState.Unchecked;
+            Confirmation_Button.Text = "EASY level selecion";
+            LevelConfirmation = "EASY";
         }
 
-        private void SelectEasyLevel_CheckedChanged_1(object sender, EventArgs e)
+        private void HardSelect_CheckedChanged(object sender, EventArgs e)
         {
             Confirmation_Button.Enabled = true;
-            Confirmation_Button.Text = "EASY level selected";
-            LevelConfirmation = "EASY";
-            SelectHardLevel.Checked = false;
-            SelectHardLevel.CheckState = CheckState.Unchecked;
+            Confirmation_Button.Text = "HARD level selection";
+            LevelConfirmation = "HARD";
         }
     }
 }

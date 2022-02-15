@@ -35,8 +35,8 @@ namespace Task_1
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.Confirmation_Button = new System.Windows.Forms.Button();
-            this.SelectEasyLevel = new System.Windows.Forms.CheckBox();
-            this.SelectHardLevel = new System.Windows.Forms.CheckBox();
+            this.EasySelect = new System.Windows.Forms.RadioButton();
+            this.HardSelect = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // label1
@@ -100,38 +100,40 @@ namespace Task_1
             this.Confirmation_Button.UseVisualStyleBackColor = true;
             this.Confirmation_Button.Click += new System.EventHandler(this.Confirmation_Button_Click);
             // 
-            // SelectEasyLevel
+            // EasySelect
             // 
-            this.SelectEasyLevel.AccessibleDescription = "";
-            this.SelectEasyLevel.AutoSize = true;
-            this.SelectEasyLevel.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.SelectEasyLevel.Location = new System.Drawing.Point(152, 152);
-            this.SelectEasyLevel.Name = "SelectEasyLevel";
-            this.SelectEasyLevel.Size = new System.Drawing.Size(133, 25);
-            this.SelectEasyLevel.TabIndex = 20;
-            this.SelectEasyLevel.Text = "EASY LEVEL";
-            this.SelectEasyLevel.UseVisualStyleBackColor = true;
-            this.SelectEasyLevel.CheckedChanged += new System.EventHandler(this.SelectEasyLevel_CheckedChanged_1);
+            this.EasySelect.AutoSize = true;
+            this.EasySelect.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.EasySelect.Location = new System.Drawing.Point(185, 141);
+            this.EasySelect.Name = "EasySelect";
+            this.EasySelect.Size = new System.Drawing.Size(64, 24);
+            this.EasySelect.TabIndex = 20;
+            this.EasySelect.TabStop = true;
+            this.EasySelect.Text = "easy";
+            this.EasySelect.UseVisualStyleBackColor = true;
+            this.EasySelect.CheckedChanged += new System.EventHandler(this.EasySelect_CheckedChanged);
             // 
-            // SelectHardLevel
+            // HardSelect
             // 
-            this.SelectHardLevel.AccessibleDescription = "";
-            this.SelectHardLevel.AutoSize = true;
-            this.SelectHardLevel.Location = new System.Drawing.Point(588, 152);
-            this.SelectHardLevel.Name = "SelectHardLevel";
-            this.SelectHardLevel.Size = new System.Drawing.Size(130, 24);
-            this.SelectHardLevel.TabIndex = 21;
-            this.SelectHardLevel.Text = "HARD LEVEL";
-            this.SelectHardLevel.UseVisualStyleBackColor = true;
-            this.SelectHardLevel.CheckedChanged += new System.EventHandler(this.SelectHardLevel_CheckedChanged_1);
+            this.HardSelect.AutoSize = true;
+            this.HardSelect.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.HardSelect.Location = new System.Drawing.Point(624, 141);
+            this.HardSelect.Name = "HardSelect";
+            this.HardSelect.Size = new System.Drawing.Size(63, 24);
+            this.HardSelect.TabIndex = 21;
+            this.HardSelect.TabStop = true;
+            this.HardSelect.Text = "hard";
+            this.HardSelect.UseVisualStyleBackColor = true;
+            this.HardSelect.CheckedChanged += new System.EventHandler(this.HardSelect_CheckedChanged);
             // 
             // DifficultyLevelSelecting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(888, 482);
-            this.Controls.Add(this.SelectHardLevel);
-            this.Controls.Add(this.SelectEasyLevel);
+            this.ControlBox = false;
+            this.Controls.Add(this.HardSelect);
+            this.Controls.Add(this.EasySelect);
             this.Controls.Add(this.Confirmation_Button);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label5);
@@ -157,7 +159,7 @@ namespace Task_1
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
         public System.Windows.Forms.Button Confirmation_Button;
-        private System.Windows.Forms.CheckBox SelectEasyLevel;
-        private System.Windows.Forms.CheckBox SelectHardLevel;
+        private System.Windows.Forms.RadioButton EasySelect;
+        private System.Windows.Forms.RadioButton HardSelect;
     }
 }

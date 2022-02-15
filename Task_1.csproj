@@ -80,6 +80,12 @@
     <Compile Include="DifficultyLevelSelecting.Designer.cs">
       <DependentUpon>DifficultyLevelSelecting.cs</DependentUpon>
     </Compile>
+    <Compile Include="HallOfFame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HallOfFame.Designer.cs">
+      <DependentUpon>HallOfFame.cs</DependentUpon>
+    </Compile>
     <Compile Include="MemoryGame.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +96,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="DifficultyLevelSelecting.resx">
       <DependentUpon>DifficultyLevelSelecting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HallOfFame.resx">
+      <DependentUpon>HallOfFame.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MemoryGame.resx">
       <DependentUpon>MemoryGame.cs</DependentUpon>
@@ -128,9 +137,6 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Words.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
