@@ -146,7 +146,9 @@ namespace Task_1
             this.MaximizeBox = false;
             this.Name = "DifficultyLevelSelecting";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "choosing difficulty level";
+            this.TopMost = true;
             this.ResumeLayout(false);
             this.PerformLayout();
 

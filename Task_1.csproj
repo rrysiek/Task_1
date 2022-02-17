@@ -80,11 +80,11 @@
     <Compile Include="DifficultyLevelSelecting.Designer.cs">
       <DependentUpon>DifficultyLevelSelecting.cs</DependentUpon>
     </Compile>
-    <Compile Include="HallOfFame.cs">
+    <Compile Include="GameConfirmation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HallOfFame.Designer.cs">
-      <DependentUpon>HallOfFame.cs</DependentUpon>
+    <Compile Include="GameConfirmation.Designer.cs">
+      <DependentUpon>GameConfirmation.cs</DependentUpon>
     </Compile>
     <Compile Include="MemoryGame.cs">
       <SubType>Form</SubType>
@@ -97,8 +97,8 @@
     <EmbeddedResource Include="DifficultyLevelSelecting.resx">
       <DependentUpon>DifficultyLevelSelecting.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HallOfFame.resx">
-      <DependentUpon>HallOfFame.cs</DependentUpon>
+    <EmbeddedResource Include="GameConfirmation.resx">
+      <DependentUpon>GameConfirmation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MemoryGame.resx">
       <DependentUpon>MemoryGame.cs</DependentUpon>

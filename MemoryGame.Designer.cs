@@ -53,13 +53,13 @@ namespace Task_1
             this.Field1 = new System.Windows.Forms.Button();
             this.NewGameSelection = new System.Windows.Forms.Button();
             this.PlayingTime = new System.Windows.Forms.Timer(this.components);
-            this.HallOfFame = new System.Windows.Forms.Button();
+            this.LevelPlayed = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lDifficultyLevelInfo
             // 
             this.lDifficultyLevelInfo.AutoSize = true;
-            this.lDifficultyLevelInfo.Location = new System.Drawing.Point(328, 63);
+            this.lDifficultyLevelInfo.Location = new System.Drawing.Point(324, 63);
             this.lDifficultyLevelInfo.Name = "lDifficultyLevelInfo";
             this.lDifficultyLevelInfo.Size = new System.Drawing.Size(58, 20);
             this.lDifficultyLevelInfo.TabIndex = 3;
@@ -68,7 +68,7 @@ namespace Task_1
             // lGC
             // 
             this.lGC.AutoSize = true;
-            this.lGC.Location = new System.Drawing.Point(328, 122);
+            this.lGC.Location = new System.Drawing.Point(324, 122);
             this.lGC.Name = "lGC";
             this.lGC.Size = new System.Drawing.Size(124, 20);
             this.lGC.TabIndex = 4;
@@ -77,7 +77,7 @@ namespace Task_1
             // LeftChanches
             // 
             this.LeftChanches.AutoSize = true;
-            this.LeftChanches.Location = new System.Drawing.Point(456, 122);
+            this.LeftChanches.Location = new System.Drawing.Point(452, 122);
             this.LeftChanches.Name = "LeftChanches";
             this.LeftChanches.Size = new System.Drawing.Size(19, 20);
             this.LeftChanches.TabIndex = 5;
@@ -86,7 +86,7 @@ namespace Task_1
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(621, 42);
+            this.label1.Location = new System.Drawing.Point(617, 42);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(75, 20);
             this.label1.TabIndex = 2;
@@ -95,16 +95,16 @@ namespace Task_1
             // lTimer
             // 
             this.lTimer.AutoSize = true;
-            this.lTimer.Location = new System.Drawing.Point(694, 42);
+            this.lTimer.Location = new System.Drawing.Point(690, 42);
             this.lTimer.Name = "lTimer";
-            this.lTimer.Size = new System.Drawing.Size(31, 20);
+            this.lTimer.Size = new System.Drawing.Size(30, 20);
             this.lTimer.TabIndex = 1;
-            this.lTimer.Text = "-- s";
+            this.lTimer.Text = "0 s";
             // 
             // Field2
             // 
             this.Field2.BackColor = System.Drawing.Color.LightGray;
-            this.Field2.Location = new System.Drawing.Point(238, 235);
+            this.Field2.Location = new System.Drawing.Point(234, 235);
             this.Field2.Name = "Field2";
             this.Field2.Size = new System.Drawing.Size(155, 92);
             this.Field2.TabIndex = 7;
@@ -116,7 +116,7 @@ namespace Task_1
             // Field3
             // 
             this.Field3.BackColor = System.Drawing.Color.LightGray;
-            this.Field3.Location = new System.Drawing.Point(404, 235);
+            this.Field3.Location = new System.Drawing.Point(400, 235);
             this.Field3.Name = "Field3";
             this.Field3.Size = new System.Drawing.Size(155, 92);
             this.Field3.TabIndex = 8;
@@ -128,7 +128,7 @@ namespace Task_1
             // Field4
             // 
             this.Field4.BackColor = System.Drawing.Color.LightGray;
-            this.Field4.Location = new System.Drawing.Point(570, 235);
+            this.Field4.Location = new System.Drawing.Point(566, 235);
             this.Field4.Name = "Field4";
             this.Field4.Size = new System.Drawing.Size(155, 92);
             this.Field4.TabIndex = 9;
@@ -140,7 +140,7 @@ namespace Task_1
             // Field5
             // 
             this.Field5.BackColor = System.Drawing.Color.LightGray;
-            this.Field5.Location = new System.Drawing.Point(72, 336);
+            this.Field5.Location = new System.Drawing.Point(68, 336);
             this.Field5.Name = "Field5";
             this.Field5.Size = new System.Drawing.Size(155, 92);
             this.Field5.TabIndex = 10;
@@ -152,7 +152,7 @@ namespace Task_1
             // Field6
             // 
             this.Field6.BackColor = System.Drawing.Color.LightGray;
-            this.Field6.Location = new System.Drawing.Point(238, 336);
+            this.Field6.Location = new System.Drawing.Point(234, 336);
             this.Field6.Name = "Field6";
             this.Field6.Size = new System.Drawing.Size(155, 92);
             this.Field6.TabIndex = 11;
@@ -164,7 +164,7 @@ namespace Task_1
             // Field7
             // 
             this.Field7.BackColor = System.Drawing.Color.LightGray;
-            this.Field7.Location = new System.Drawing.Point(404, 336);
+            this.Field7.Location = new System.Drawing.Point(400, 336);
             this.Field7.Name = "Field7";
             this.Field7.Size = new System.Drawing.Size(155, 92);
             this.Field7.TabIndex = 12;
@@ -176,7 +176,7 @@ namespace Task_1
             // Field8
             // 
             this.Field8.BackColor = System.Drawing.Color.LightGray;
-            this.Field8.Location = new System.Drawing.Point(570, 336);
+            this.Field8.Location = new System.Drawing.Point(566, 336);
             this.Field8.Name = "Field8";
             this.Field8.Size = new System.Drawing.Size(155, 92);
             this.Field8.TabIndex = 13;
@@ -188,7 +188,7 @@ namespace Task_1
             // Field9
             // 
             this.Field9.BackColor = System.Drawing.Color.LightGray;
-            this.Field9.Location = new System.Drawing.Point(72, 437);
+            this.Field9.Location = new System.Drawing.Point(68, 437);
             this.Field9.Name = "Field9";
             this.Field9.Size = new System.Drawing.Size(155, 92);
             this.Field9.TabIndex = 14;
@@ -200,7 +200,7 @@ namespace Task_1
             // Field10
             // 
             this.Field10.BackColor = System.Drawing.Color.LightGray;
-            this.Field10.Location = new System.Drawing.Point(238, 437);
+            this.Field10.Location = new System.Drawing.Point(234, 437);
             this.Field10.Name = "Field10";
             this.Field10.Size = new System.Drawing.Size(155, 92);
             this.Field10.TabIndex = 15;
@@ -212,7 +212,7 @@ namespace Task_1
             // Field11
             // 
             this.Field11.BackColor = System.Drawing.Color.LightGray;
-            this.Field11.Location = new System.Drawing.Point(404, 437);
+            this.Field11.Location = new System.Drawing.Point(400, 437);
             this.Field11.Name = "Field11";
             this.Field11.Size = new System.Drawing.Size(155, 92);
             this.Field11.TabIndex = 16;
@@ -224,7 +224,7 @@ namespace Task_1
             // Field12
             // 
             this.Field12.BackColor = System.Drawing.Color.LightGray;
-            this.Field12.Location = new System.Drawing.Point(570, 437);
+            this.Field12.Location = new System.Drawing.Point(566, 437);
             this.Field12.Name = "Field12";
             this.Field12.Size = new System.Drawing.Size(155, 92);
             this.Field12.TabIndex = 17;
@@ -236,7 +236,7 @@ namespace Task_1
             // Field13
             // 
             this.Field13.BackColor = System.Drawing.Color.LightGray;
-            this.Field13.Location = new System.Drawing.Point(72, 538);
+            this.Field13.Location = new System.Drawing.Point(68, 538);
             this.Field13.Name = "Field13";
             this.Field13.Size = new System.Drawing.Size(155, 92);
             this.Field13.TabIndex = 18;
@@ -248,7 +248,7 @@ namespace Task_1
             // Field14
             // 
             this.Field14.BackColor = System.Drawing.Color.LightGray;
-            this.Field14.Location = new System.Drawing.Point(238, 538);
+            this.Field14.Location = new System.Drawing.Point(234, 538);
             this.Field14.Name = "Field14";
             this.Field14.Size = new System.Drawing.Size(155, 92);
             this.Field14.TabIndex = 19;
@@ -260,7 +260,7 @@ namespace Task_1
             // Field15
             // 
             this.Field15.BackColor = System.Drawing.Color.LightGray;
-            this.Field15.Location = new System.Drawing.Point(404, 538);
+            this.Field15.Location = new System.Drawing.Point(400, 538);
             this.Field15.Name = "Field15";
             this.Field15.Size = new System.Drawing.Size(155, 92);
             this.Field15.TabIndex = 20;
@@ -272,7 +272,7 @@ namespace Task_1
             // Field16
             // 
             this.Field16.BackColor = System.Drawing.Color.LightGray;
-            this.Field16.Location = new System.Drawing.Point(570, 538);
+            this.Field16.Location = new System.Drawing.Point(566, 538);
             this.Field16.Name = "Field16";
             this.Field16.Size = new System.Drawing.Size(155, 92);
             this.Field16.TabIndex = 21;
@@ -284,7 +284,7 @@ namespace Task_1
             // Field1
             // 
             this.Field1.BackColor = System.Drawing.Color.LightGray;
-            this.Field1.Location = new System.Drawing.Point(72, 235);
+            this.Field1.Location = new System.Drawing.Point(68, 235);
             this.Field1.Name = "Field1";
             this.Field1.Size = new System.Drawing.Size(155, 92);
             this.Field1.TabIndex = 6;
@@ -295,7 +295,7 @@ namespace Task_1
             // 
             // NewGameSelection
             // 
-            this.NewGameSelection.Location = new System.Drawing.Point(72, 42);
+            this.NewGameSelection.Location = new System.Drawing.Point(68, 42);
             this.NewGameSelection.Name = "NewGameSelection";
             this.NewGameSelection.Size = new System.Drawing.Size(109, 41);
             this.NewGameSelection.TabIndex = 0;
@@ -309,23 +309,21 @@ namespace Task_1
             this.PlayingTime.Interval = 1000;
             this.PlayingTime.Tick += new System.EventHandler(this.PlayingTime_Tick);
             // 
-            // HallOfFame
+            // LevelPlayed
             // 
-            this.HallOfFame.Location = new System.Drawing.Point(72, 101);
-            this.HallOfFame.Name = "HallOfFame";
-            this.HallOfFame.Size = new System.Drawing.Size(109, 41);
-            this.HallOfFame.TabIndex = 22;
-            this.HallOfFame.TabStop = false;
-            this.HallOfFame.Text = "Hall of fame";
-            this.HallOfFame.UseVisualStyleBackColor = true;
-            this.HallOfFame.Click += new System.EventHandler(this.HallOfFame_Click);
+            this.LevelPlayed.AutoSize = true;
+            this.LevelPlayed.Location = new System.Drawing.Point(435, 63);
+            this.LevelPlayed.Name = "LevelPlayed";
+            this.LevelPlayed.Size = new System.Drawing.Size(34, 20);
+            this.LevelPlayed.TabIndex = 23;
+            this.LevelPlayed.Text = "-----";
             // 
             // MemoryGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(794, 714);
-            this.Controls.Add(this.HallOfFame);
+            this.ClientSize = new System.Drawing.Size(780, 687);
+            this.Controls.Add(this.LevelPlayed);
             this.Controls.Add(this.NewGameSelection);
             this.Controls.Add(this.Field1);
             this.Controls.Add(this.Field16);
@@ -383,7 +381,7 @@ namespace Task_1
         private System.Windows.Forms.Button Field1;
         private System.Windows.Forms.Button NewGameSelection;
         private System.Windows.Forms.Timer PlayingTime;
-        private System.Windows.Forms.Button HallOfFame;
+        private System.Windows.Forms.Label LevelPlayed;
     }
 }
 
